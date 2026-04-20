@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-AI Debate System</title>
+    
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌓</button>
+    <div class="container">
+        <h1>⚡ Multi-AI War Room</h1>
+        <div class="sub">Advanced Reasoning & Orchestration Engine</div>
+
+        <div class="glass input-area">
+            <textarea id="query" rows="3" placeholder="Deploy your query to the AI Siblings..."></textarea>
+            <div class="button-group">
+                <button id="askBtn" onclick="ask()">🚀 Execute</button>
+                <div class="rounds-input">
+                    <label>Depth:</label>
+                    <input type="number" id="rounds" min="1" max="5" value="1">
+                </div>
+                <button id="debateBtn" onclick="runDebate()" disabled>⚔️ Debate Mode</button>
+                <button id="synthesizeBtn" onclick="synthesize()" disabled>🧠 Final Verdict</button>
+                <button id="resetBtn" onclick="reset()">🔄 Clear Session</button>
+            </div>
+        </div>
+
+        <div id="debateStatus" class="status-bar"></div>
+
+        <div id="answersContainer">
+            <div class="answer-card" style="color: var(--text-secondary);">
+                <div class="card-header">System Standby</div>
+                <div class="card-content">Waiting for input...</div>
+            </div>
+        </div>
+
+        <details id="historyPanel">
+            <summary>📜 Conversation Logs</summary>
+            <div id="historyList">No logs active.</div>
+        </details>
+        <footer>Engineered with Multi-Agent Orchestration</footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
